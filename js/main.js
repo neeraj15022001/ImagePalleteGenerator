@@ -4,15 +4,13 @@ $(document).ready(function () {
 });
 const container = document.getElementById("content-container");
 
-
 if (localStorage.getItem("data")) {
-  const data = JSON.parse(localStorage.getItem("data"))
-  data.forEach(image => {
-    const imageURL = image.urls.regular
-    createElement(imageURL)
-  })
-  getColor()
-
+  const data = JSON.parse(localStorage.getItem("data"));
+  data.forEach((image) => {
+    const imageURL = image.urls.regular;
+    createElement(imageURL);
+  });
+  getColor();
 } else {
   var requestOptions = {
     method: "GET",
@@ -26,10 +24,10 @@ if (localStorage.getItem("data")) {
     .then(async (result) => {
       console.log(result);
       localStorage.setItem("data", JSON.stringify(result));
-      for await(let image of result) {
-        const imageURL = image.urls.regular
-        console.log(imageURL)
-        createElement(imageURL)
+      for await (let image of result) {
+        const imageURL = image.urls.regular;
+        console.log(imageURL);
+        createElement(imageURL);
       }
     })
     .catch((error) => console.log("error", error));

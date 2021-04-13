@@ -4,27 +4,28 @@ $(document).ready(function () {
   fakeloader.init();
 });
 
-"use strict";
+("use strict");
 function dragNdrop(event) {
-    var fileName = URL.createObjectURL(event.target.files[0]);
-    // var preview = document.getElementById("preview");
-    // preview.style.backgroundImage = `url(${fileName})`
-    createElement(fileName)
-    getColor()
-    // var previewImg = document.createElement("img");
-    // previewImg.setAttribute("src", fileName);
-    // preview.innerHTML = "";
-    // preview.appendChild(previewImg);
+  var fileName = URL.createObjectURL(event.target.files[0]);
+  // var preview = document.getElementById("preview");
+  // preview.style.backgroundImage = `url(${fileName})`
+  createElement(fileName);
+  getColor();
+  // var previewImg = document.createElement("img");
+  // previewImg.setAttribute("src", fileName);
+  // preview.innerHTML = "";
+  // preview.appendChild(previewImg);
 }
 function drag() {
-    document.getElementById('uploadFile').parentNode.className = 'draging dragBox';
+  document.getElementById("uploadFile").parentNode.className =
+    "draging dragBox";
 }
 function drop() {
-    document.getElementById('uploadFile').parentNode.className = 'dragBox';
+  document.getElementById("uploadFile").parentNode.className = "dragBox";
 }
 
 function createElement(imageURL) {
-    const element = `
+  const element = `
           <div class="col-12 px-3 py-5">
             <div class="card shadow-sm border-0">
             <img src=${imageURL} alt="image_new" class="newImage d-none" crossorigin="anonymous" />
@@ -56,6 +57,5 @@ function createElement(imageURL) {
             </div>
           </div>
           `;
-    container.innerHTML += element;
-  }
-  
+  container.innerHTML += element;
+}
