@@ -7,7 +7,6 @@ const container = document.getElementById("content-container");
 
 if (localStorage.getItem("data")) {
   const data = JSON.parse(localStorage.getItem("data"))
-  console.log(data)
   data.forEach(image => {
     const imageURL = image.urls.regular
     createElement(imageURL)
