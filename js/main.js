@@ -51,15 +51,15 @@ function createElement(imageURL) {
               <div class="container-fluid px-2">
                 <div class="row">
                   <div
-                    class="rounded-circle mx-lg-1"
+                    class="rounded-circle mx-1"
                     style="height: 2.5rem; width: 2.5rem"
                   ></div>
                   <div
-                    class="rounded-circle mx-lg-1"
+                    class="rounded-circle mx-1"
                     style="height: 2.5rem; width: 2.5rem"
                   ></div>
                   <div
-                    class="rounded-circle mx-lg-1"
+                    class="rounded-circle mx-1"
                     style="height: 2.5rem; width: 2.5rem"
                   ></div>
                 </div>

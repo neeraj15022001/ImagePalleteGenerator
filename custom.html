@@ -59,7 +59,7 @@
           <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ms-auto">
               <li class="nav-item">
-                <a class="nav-link" href="#">Random Palette</a>
+                <a class="nav-link" href="./index.html">Random Palette</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link active" aria-current="page" href="#"
@@ -75,42 +75,18 @@
       <div class="uploadOuter">
         <label for="uploadFile" class="btn btn-primary">Upload Image</label>
         <strong>OR</strong>
-      <span class="dragBox" >
-        Darg and Drop image here
-      <input type="file" onChange="dragNdrop(event)"  ondragover="drag()" ondrop="drop()" id="uploadFile"  />
-      </span>
+        <span class="dragBox">
+          Darg and Drop image here
+          <input
+            type="file"
+            onChange="dragNdrop(event)"
+            ondragover="drag()"
+            ondrop="drop()"
+            id="uploadFile"
+          />
+        </span>
       </div>
-      <div class="col-12 col-md-6 col-lg-3 px-3 py-5">
-        <div class="card shadow border-0">
-        
-          <div class="card-img-top" style="height:20rem;width:100%;background-size:contain;background-repeat: no-repeat;background-position: center;" id="preview" /></div>
-          <div class="card-body">
-            <h5 class="card-title">Dominant Color</h5>
-            <div
-              class="rounded-circle bg-primary mb-3"
-              style="height: 2.5rem; width: 2.5rem"
-            ></div>
-            <h5 class="card-title">Palette</h5>
-            <div class="container-fluid px-2">
-              <div class="row">
-                <div
-                  class="rounded-circle bg-primary mx-lg-1"
-                  style="height: 2.5rem; width: 2.5rem"
-                ></div>
-                <div
-                  class="rounded-circle bg-primary mx-lg-1"
-                  style="height: 2.5rem; width: 2.5rem"
-                ></div>
-                <div
-                  class="rounded-circle bg-primary mx-lg-1"
-                  style="height: 2.5rem; width: 2.5rem"
-                ></div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      
+      <div id="content-container"></div>
     </div>
     <!-- External Scripts -->
     <script
@@ -121,6 +97,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="./js/fakeloader.js"></script>
     <script src="./pwa.js"></script>
+    <script src="./js/colorThief.js"></script>
     <script src="./js/custom.js"></script>
   </body>
 </html>
