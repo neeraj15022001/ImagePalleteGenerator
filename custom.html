@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Image Color Palette Generator</title>
+    <link rel="stylesheet" href="./css/custom.css" />
+    <link rel="manifest" href="./manifest.json" />
+    <link rel="shortcut icon" href="./logo.png" />
+    <meta name="title" content="Image Color Palette Generator" />
+    <meta
+      name="description"
+      content="This tool is used to generate colors from image including the dominant color and palette of four colors"
+    />
+    <meta
+      name="keywords"
+      content="Palette,Color Generator, Image Color Palette Generator"
+    />
+    <meta name="robots" content="index, follow" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="language" content="English" />
+    <meta name="author" content="Neeraj Gupta" />
+    <!-- CDN -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x"
+      crossorigin="anonymous"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/color-thief/2.3.0/color-thief.umd.js"></script>
+
+    <!-- Internal CSS -->
+    <link rel="stylesheet" href="./css/fakeloader.css" />
+  </head>
+  <body>
+    <div class="bg-warning position-fixed end-0 start-0 top-0 bottom-0 d-flex align-items-center justify-content-center" style="z-index: 100000;"><p class="display-1 fw-bold">Under Construction</p></div>
+    <div id="fakeloader-overlay" class="visible incoming">
+      <div class="loader-wrapper-outer">
+        <div class="loader-wrapper-inner"><div class="loader"></div></div>
+      </div>
+    </div>
+    <div class="overflow-hidden">
+      <!-- Navbar -->
+      <nav class="navbar navbar-expand-lg navbar-dark bg-primary py-3">
+        <div class="container-fluid">
+          <a class="navbar-brand fw-bold" href="#">Image Palette Generator</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="#"
+                  >Custom Palette</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="#">Random Palette</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      <!-- Content Body -->
+      <div class="uploadOuter">
+        <label for="uploadFile" class="btn btn-primary">Upload Image</label>
+        <strong>OR</strong>
+      <span class="dragBox" >
+        Darg and Drop image here
+      <input type="file" onChange="dragNdrop(event)"  ondragover="drag()" ondrop="drop()" id="uploadFile"  />
+      </span>
+      </div>
+      <div class="col-12 col-md-6 col-lg-3 px-3 py-5">
+        <div class="card shadow border-0">
+        
+          <div class="card-img-top" style="height:20rem;width:100%;background-size:contain;background-repeat: no-repeat;background-position: center;" id="preview" /></div>
+          <div class="card-body">
+            <h5 class="card-title">Dominant Color</h5>
+            <div
+              class="rounded-circle bg-primary mb-3"
+              style="height: 2.5rem; width: 2.5rem"
+            ></div>
+            <h5 class="card-title">Palette</h5>
+            <div class="container-fluid px-2">
+              <div class="row">
+                <div
+                  class="rounded-circle bg-primary mx-lg-1"
+                  style="height: 2.5rem; width: 2.5rem"
+                ></div>
+                <div
+                  class="rounded-circle bg-primary mx-lg-1"
+                  style="height: 2.5rem; width: 2.5rem"
+                ></div>
+                <div
+                  class="rounded-circle bg-primary mx-lg-1"
+                  style="height: 2.5rem; width: 2.5rem"
+                ></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+    <!-- External Scripts -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="./js/fakeloader.js"></script>
+    <script src="./pwa.js"></script>
+    <script src="./js/custom.js"></script>
+  </body>
+</html>
